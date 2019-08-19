@@ -5,6 +5,7 @@ set rtp+=$VIM/vimfiles/bundle/vundle/
 call vundle#rc('$VIM/vimfiles/bundle/')
 Bundle 'gmarik/vundle'
 filetype plugin indent on
+
  
 " original repos on github<br>Bundle 'mattn/zencoding-vim'
 Bundle 'drmingdrmer/xptemplate'
