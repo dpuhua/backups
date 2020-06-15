@@ -1,0 +1,106 @@
+@globalBlack:#44444F;
+@globalGrey:#A9A8AE;
+@globalNull:#f1f1f1;
+
+.borderRadius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  //-ms-border-radius: @radius;
+  //-o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+//定位全屏
+.allcover {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+//定位上下左右居中
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+.ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位上下居中
+.cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//宽高
+.wh(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+//字体大小
+.fs(@size){
+  font-size: @size;
+}
+
+//字体大小、行高、字体
+.font(@size, @line-height, @family: 'Microsoft YaHei') {
+  font: @size/@line-height @family;
+}
+
+//字体大小，颜色
+.sc(@size, @color) {
+  font-size: @size;
+  color: @color;
+}
+
+//flex 布局和 子元素 对其方式
+.fj(@type: space-between) {
+  display: flex;
+  justify-content: @type;
+
+}
+
+/* 文字溢出隐藏--控制文本单行出省略号 */
+.ellipsis(@w:initial) {
+  width: @w;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+/* 文字溢出隐藏--控制文本多行出省略号 */
+.ellipsisMore(@line:2, @lineheight:1.5*20px/@p) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+  line-height: @lineheight;
+  max-height: (@lineheight * @line);
+}
+
+//定位 右下角
+.pbr{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.fixLastMargin(@mr){
+  margin-right: @mr;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+
+

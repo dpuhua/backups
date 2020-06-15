@@ -1,0 +1,74 @@
+// 弹窗外层圆角
+.el-dialog {
+  border-radius: 8px;
+}
+
+// 分页器 样式
+.el-select-dropdown__item.selected {
+  color: #44444f;
+  font-weight: 700;
+}
+.el-date-table td.today span,
+.el-date-table td.available:hover {
+  color: #44444f;
+}
+.el-date-table td.current:not(.disabled) span {
+  background-color: #e62e37;
+}
+.el-date-table th {
+  text-align: center;
+}
+
+.hd-pagination /deep/ {
+  .el-pager li:not(.disabled).active {
+    background-color: #e62e37;
+    border: 1px solid #e62e37;
+    color: #ffffff;
+  }
+  .el-pager li:hover {
+    color: #e62e37;
+  }
+  .el-pager li,
+  .btn-next,
+  .btn-prev {
+    margin: 0 5px;
+    background-color: #ffffff;
+    color: #606266;
+    min-width: 30px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 100;
+    border: 1px solid #d9d9d9;
+  }
+
+  .el-input--mini .el-input__inner,
+  button,
+  span:not([class*='suffix']),
+  .el-pagination__editor.el-input .el-input__inner,
+  .el-pagination__editor {
+    height: 32px;
+    line-height: 32px;
+  }
+  .el-select .el-input.is-focus .el-input__inner {
+    border: 1px solid #cfcfd4;
+  }
+  .el-pagination__sizes .el-input .el-input__inner:hover {
+    border: 1px solid #cfcfd4;
+  }
+}
+
+.el-table {
+  .el-table__empty-block {
+    padding-top: 160px;
+    background: url(~@/assets/img/global/nodata.png) no-repeat center;
+    background-size: 104px 88px;
+  }
+  .el-table__empty-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(169, 168, 174, 1);
+  }
+}

@@ -1,0 +1,142 @@
+@import "reset";
+@import "mixin";
+@import "element_reset";
+//配合vue框架使用，勿删
+[v-cloak] {
+  display: none !important;
+}
+
+// 公共样式----------
+.hide {
+  display: none !important;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix::after {
+  display: block;
+  height: 0;
+  content: "";
+  clear: both;
+  visibility: hidden;
+}
+
+// 定位上下左右居中
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 定位上下居中
+.ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// 定位上下居中
+.cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 居中布局
+.center-layout {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+// 实心按钮样式
+.btn {
+  color: #fff;
+  background-color:#E62E37;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: #D31C25;
+  }
+  &.block {
+    display: block;
+    width: 100%;
+  }
+}
+
+// 空心按钮样式
+.btn-plain {
+  color: #44444F;
+  border: solid 1px #D1D1D1;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    color: #E62E37;
+    border-color: #E62E37;
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+}
+// 图标
+i {
+  display: inline-block;
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+// 重置element-ui 选择框 颜色为恒大宝主色
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: #E62E37;
+  border-color: #E62E37;
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+  border-color: #E62E37;
+}
+
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: #E62E37;
+}
+
+// 重置element-ui danger 按钮 颜色为恒大宝主色
+.el-button--danger {
+  background: #E62E37;
+  border-color: #E62E37;
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+}
+// 重置element-ui warning 按钮 颜色为恒大宝推荐按钮主色
+.el-button--warning{
+  background: #FF9131;
+  border-color: #FF9131;
+  &.block {
+    display: block;
+    width: 100%;
+  }
+}
+
+.el-button--danger:focus,
+.el-button--danger:hover,
+.el-button--danger:active {
+  background: #D31C25;
+  border-color: #D31C25;
+}
